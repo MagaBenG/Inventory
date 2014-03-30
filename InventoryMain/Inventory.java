@@ -2,8 +2,11 @@ package InventoryMain;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -32,9 +35,12 @@ public class Inventory {
 		
 		BPSI.setPreferredSize(new Dimension(100, 100));
 		
+		
 		// Words
 		
 		JLabel OpenText = new JLabel("Pick An Inventory");
+		
+		OpenText.setFont(new Font("Verdana",1,20));
 		
 		// JPanels
 		
@@ -60,7 +66,10 @@ public class Inventory {
 		
 		// All Together Now!
 		
+		InventoryPanel.add(OpenText);
+		
 		InventoryPanel.add(BPSI);
+		
 		
 	}
 	
