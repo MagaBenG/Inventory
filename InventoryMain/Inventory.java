@@ -4,9 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -25,9 +23,7 @@ public class Inventory {
 		
 		// Var & Strings
 		
-		String MainWindow = "Test";
-		
-		String InventoryPanelName = "Inventory";
+		String MainWindow = "Inventory";
 		
 		// Buttons
 		
@@ -35,6 +31,9 @@ public class Inventory {
 		
 		BPSI.setPreferredSize(new Dimension(100, 100));
 		
+		JButton BPSII = new JButton("BPS II");
+		
+		BPSII.setPreferredSize(new Dimension(100, 100));
 		
 		// Words
 		
@@ -70,6 +69,7 @@ public class Inventory {
 		
 		InventoryPanel.add(BPSI);
 		
+		InventoryPanel.add(BPSII);
 		
 	}
 	
