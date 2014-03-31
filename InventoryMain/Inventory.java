@@ -3,6 +3,8 @@ package InventoryMain;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -27,23 +29,23 @@ public class Inventory {
 		
 		// Buttons
 		
-		JButton BPSI = new JButton("BPS I");
+		final JButton BPSI = new JButton("BPS I");
 		
 		BPSI.setPreferredSize(new Dimension(100, 100));
 		
-		JButton BPSII = new JButton("BPS II");
+		final JButton BPSII = new JButton("BPS II");
 		
 		BPSII.setPreferredSize(new Dimension(100, 100));
 		
 		// Words
 		
-		JLabel OpenText = new JLabel("Pick An Inventory");
+		final JLabel OpenText = new JLabel("Pick An Inventory");
 		
 		OpenText.setFont(new Font("Verdana",1,20));
 		
 		// JPanels
 		
-		JPanel InventoryPanel = new JPanel();
+		final JPanel InventoryPanel = new JPanel();
 		
 		InventoryPanel.setVisible(true);
 		
@@ -51,7 +53,7 @@ public class Inventory {
 		
 		// Jframe Setup
 		
-		JFrame Inventory = new JFrame(MainWindow);
+		final JFrame Inventory = new JFrame(MainWindow);
 		
 		Inventory.setVisible(true);
 		
@@ -62,6 +64,28 @@ public class Inventory {
 		Inventory.setSize(800, 600);
 		
 		JFrame.setDefaultLookAndFeelDecorated(true);
+		
+		//JButton Testing
+		
+		 BPSI.addActionListener(new ActionListener() {
+			  
+	            public void actionPerformed(ActionEvent e)
+	            {
+	            
+	            	BPSI.setVisible(false);
+	            
+	            }      
+	        });     
+		 
+		 BPSII.addActionListener(new ActionListener() {
+			  
+	            public void actionPerformed(ActionEvent e)
+	            {
+	            
+	            	BPSI.setVisible(true);
+	            
+	            }      
+	        }); 
 		
 		// All Together Now!
 		
